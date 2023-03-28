@@ -1,0 +1,76 @@
+*{
+    box-sizing: border-box;
+    display:relative;
+}
+body{
+    background-color:pink;
+    text-align: center;
+}
+.header{
+    font-size:3rem;
+    margin:30px auto;
+}
+.game-board{
+    position:relative;
+    height:50vh;
+    width:50vh;
+    margin: 10rem auto;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 4px;
+
+}
+.card-set{
+    border: 1px solid white;
+    transform-style: preserve-3d;
+    height:100%;
+    width:100%;
+    transition: transform 1s ease-in-out;
+
+}
+.front{
+    position:absolute;
+    height:100%;
+    width:100%;
+    backface-visibility: hidden;
+    background-image:url("https://ugc.berkeley.edu/wp-content/uploads/2016/01/thunderstorm-3625405_1920.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.back{
+    height:100%;
+    width:100%;
+    position:absolute;
+    backface-visibility: hidden;
+    transform:rotateY(180deg);
+}
+.card-set.flip {
+    transform:rotateY(180deg);
+}
+
+
+#backOne,#backSix{
+    background-color: purple;
+}
+#backTwo,#backFive{
+    background-color:greenyellow;
+}
+#backThree,#backFour{
+    background-color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
